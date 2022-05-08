@@ -1,50 +1,16 @@
-AndroidTrivia - starter code
-============================
+1 - What are some of the differences between fragments and activities? Select all the statements that are true.
 
-Starter code for Android Kotlin Fundamentals codelab 3.1: Create and add a
-fragment.
+a. When creating a Fragment, you inflate the layout in the onCreateView() method. When creating an Activity, you inflate the layout in onCreate().
+b. An Activity has its own layout, but a Fragment cannot have its own layout.
+c. An Activity has its own lifecycle, but a Fragment doesn't.
+d. When inflating the layout for either a Fragment or an Activity, you can reference the layout as R.layout.layoutname.
 
-Introduction
-------------
+==> Answer: a,d
 
-The AndroidTrivia app asks the user trivia questions about Android development.
-It makes use of the navigation component within Jetpack to move the user between
-screens. Each screen is implemented as a fragment.
-
-The app navigates using buttons, the app bar, and a navigation drawer. Because
-students haven't yet learned about saving data or the Android lifecycle, the app
-tries to eliminate bugs caused by configuration changes.
-
-Prerequisites
--------------
-
-You need to know:
-- The fundamentals of Kotlin.
-- How to create basic Android apps in Kotlin.
-- How to open, build, and run apps with Android Studio.
-- How to work with layouts.
-
-Getting started
----------------
-
-1. Download and run the app.
-
-License
--------
-
-Copyright 2019 Google, Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+2 - Which of the following statements about fragments are true? Select all that apply.
+a. You can use a Fragment in more than one Activity.
+b. One Activity can have multiple fragments.
+c. After you define a Fragment in a Kotlin class, the Fragment is automatically added to the activity_main.xml layout file.
+d. Use the <fragment> tag to define the place in a layout file where a Fragment is to be inserted.
+  
+==> Answer: a,b,d
