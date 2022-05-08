@@ -2,7 +2,8 @@ Nội dung:
 1. View - View Group
 2. TextView - ImageView
 3. Linear Layout - Scroll View
-4. TextStyle - Font - Padding - Margin - Dimention 
+4. TextStyle - Font - Padding - Margin - Dimention
+
 Home Work:
 1 - Which of the following is a view group?
 
