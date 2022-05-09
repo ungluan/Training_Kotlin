@@ -1,12 +1,11 @@
 package com.example.colormyviews
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ListView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,21 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun makeColored(view: View) {
-        when (view.id) {
-            // Boxes using Color class colors for the background
-            R.id.box_one_text -> view.setBackgroundColor(Color.DKGRAY)
-            R.id.box_two_text -> view.setBackgroundColor(Color.GRAY)
-            R.id.box_three_text -> view.setBackgroundColor(Color.BLUE)
-            R.id.box_four_text -> view.setBackgroundColor(Color.MAGENTA)
-            R.id.box_five_text -> view.setBackgroundColor(Color.BLUE)
-            R.id.red_button -> findViewById<TextView>(R.id.box_three_text)
-                .setBackgroundResource(R.color.my_red)
-            R.id.yellow_button -> findViewById<TextView>(R.id.box_four_text)
-                .setBackgroundResource(R.color.my_yellow)
-            R.id.green_button -> findViewById<TextView>(R.id.box_five_text)
-                .setBackgroundResource(R.color.my_green)
-            else -> view.setBackgroundColor(Color.LTGRAY)
-        }
+        view.setBackgroundColor(getColorRandom())
     }
 
     private fun setListeners() {
@@ -40,12 +25,11 @@ class MainActivity : AppCompatActivity() {
         val boxThreeText = findViewById<TextView>(R.id.box_three_text)
         val boxFourText = findViewById<TextView>(R.id.box_four_text)
         val boxFiveText = findViewById<TextView>(R.id.box_five_text)
+        val boxOne = findViewById<TextView>(R.id.box_01)
+        val boxTwo = findViewById<TextView>(R.id.box_02)
+        val boxThree = findViewById<TextView>(R.id.box_03)
 
         val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
-
-        val redButton = findViewById<Button>(R.id.red_button)
-        val greenButton = findViewById<Button>(R.id.green_button)
-        val yellowButton = findViewById<Button>(R.id.yellow_button)
 
         val clickableViews: List<View> =
             listOf(
@@ -55,13 +39,21 @@ class MainActivity : AppCompatActivity() {
                 boxFourText,
                 boxFiveText,
                 rootConstraintLayout,
-                redButton,
-                greenButton,
-                yellowButton
+                boxOne,
+                boxTwo,
+                boxThree
             )
 
         for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
         }
+    }
+
+    private fun getColorRandom(): Int {
+        val rnd = Random()
+        return Color.argb(
+            255, rnd.nextInt(256),
+            rnd.nextInt(256), rnd.nextInt(256)
+        )
     }
 }
