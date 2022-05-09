@@ -1,0 +1,3 @@
+# Progress Training_Kotlin 
+Ngày 1: Finished 86%
+Ngày 2: Finished ...
