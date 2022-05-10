@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/01.4.GuessTheWord_LiveDataTransformations.iml" filepath="$PROJECT_DIR$/.idea/modules/01.4.GuessTheWord_LiveDataTransformations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/01.4.GuessTheWord_LiveDataTransformations.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/01.4.GuessTheWord_LiveDataTransformations.app.iml" />
+    </modules>
+  </component>
+</project>
