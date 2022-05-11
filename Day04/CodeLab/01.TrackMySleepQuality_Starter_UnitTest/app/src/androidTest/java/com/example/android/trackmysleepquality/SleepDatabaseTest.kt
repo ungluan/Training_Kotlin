@@ -33,6 +33,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
+import javax.annotation.meta.When
 
 
 /**
@@ -110,8 +111,7 @@ class SleepDatabaseTest {
             sleepDao.insert(night)
         }
 
-        val size = sleepDao.getAllNights()
-        val preSize = 0
+        val preSize = sleepDao.getAllNights().value?.size ?: 0
         sleepDao.clear()
         val currentSize = sleepDao.getAllNights().value?.size ?: 0
         assertNotEquals(preSize,currentSize)
